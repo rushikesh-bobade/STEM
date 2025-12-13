@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1765054946209,
+      "tag": "0000_material_war_machine",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1765055002887,
+      "tag": "0001_gray_onslaught",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1765056207938,
+      "tag": "0002_silky_blindfold",
+      "breakpoints": true
+    }
+  ]
+}
