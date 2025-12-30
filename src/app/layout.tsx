@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { VisualEditsMessenger } from "orchids-visual-edits";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { CartProvider } from "@/lib/cart-context";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TechyGuide | STEM Education & Robotics",
-  description: "Empowering the next generation of innovators with cutting-edge STEM education, robotics kits, and AI courses.",
+  title: "TechyGuide - STEM Education Platform",
+  description: "Empowering the next generation of innovators with cutting-edge STEM education and tools.",
 };
 
 export default function RootLayout({
@@ -28,13 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <CartProvider>
+          <div className="flex min-h-screen flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </CartProvider>
         <VisualEditsMessenger />
       </body>
     </html>
