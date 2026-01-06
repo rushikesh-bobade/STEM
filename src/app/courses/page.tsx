@@ -241,7 +241,7 @@ export default function CoursesPage() {
                   >
                     <div
                       className={`relative ${
-                        viewMode === "list" ? "w-48 shrink-0" : "aspect-[4/3]"
+                        viewMode === "list" ? "w-48 shrink-0" : "aspect-4/3"
                       }`}
                     >
                       <Image
@@ -259,7 +259,10 @@ export default function CoursesPage() {
                           {course.badge.charAt(0).toUpperCase() + course.badge.slice(1)}
                         </Badge>
                       )}
-                      <button className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-600 opacity-0 transition-opacity hover:bg-white group-hover:opacity-100">
+                      <button
+                        title="Add to favorites"
+                        className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-600 opacity-0 transition-opacity hover:bg-white group-hover:opacity-100"
+                      >
                         <svg
                           className="h-4 w-4"
                           fill="none"

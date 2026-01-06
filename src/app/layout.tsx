@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { VisualEditsMessenger } from "orchids-visual-edits";
 import { CartProvider } from "@/lib/cart-context";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -38,7 +37,6 @@ export default function RootLayout({
             <Footer />
           </div>
         </CartProvider>
-        <VisualEditsMessenger />
       </body>
     </html>
   );
