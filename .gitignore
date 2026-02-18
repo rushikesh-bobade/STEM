@@ -36,3 +36,30 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local environment variables
+.env
+.env.*
+
+# lock files
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# system files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE files
+.vscode/
